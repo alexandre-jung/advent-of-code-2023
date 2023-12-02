@@ -1,5 +1,4 @@
-const fs = require('fs');
-const path = require('path');
+const { readDataFile } = require('./utils');
 
 const ZERO_CHAR_CODE = '0'.charCodeAt(0);
 const NINE_CHAR_CODE = '9'.charCodeAt(0);
@@ -19,11 +18,7 @@ const ALPHA_TO_NUMBERS = {
 
 const ALPHA_NUMBERS_REGEX = /^(one|two|three|four|five|six|seven|eight|nine)/;
 
-const currentDir = path.resolve(__dirname);
-const dataPath = `${currentDir}/data/day_1.txt`;
-
-const sumOfCalibrationValues = fs.readFileSync(dataPath)
-  .toString()
+const sumOfCalibrationValues = readDataFile('day_1.txt')
   .split('\n')
   .map(decode)
   .map(e => parseInt(e, 10))

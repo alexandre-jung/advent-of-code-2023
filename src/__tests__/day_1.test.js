@@ -1,4 +1,4 @@
-const { decode, results } = require('../src/day_1');
+const { decode, results } = require('../day_1');
 
 describe('day 1', () => {
   describe('decode', () => {
