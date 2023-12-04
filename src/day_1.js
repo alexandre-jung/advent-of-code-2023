@@ -51,8 +51,6 @@ function decode(entry) {
   return [first, last].join('');
 }
 
-console.log(sumOfCalibrationValues);  // 54094
-
 module.exports = {
   decode,
   results: {
